@@ -5,7 +5,7 @@ from ultralytics import YOLO
 import time
 
 # Initialize video capture
-cap = cv2.VideoCapture("Human_Abnormality_Detection/video_55.avi")
+cap = cv2.VideoCapture("Human_Abnormality_Detection/video.avi")
 time.sleep(2)
 
 if not cap.isOpened():

@@ -10,7 +10,7 @@ This project can be enhanced with additional features to make it more robust, sc
 ### Core Features
 - **Fall Detection**: Detects potential falls in video feeds using YOLOv8 object detection.
 - **Real-Time Processing**: Processes video frames in real-time, annotating detections with bounding boxes and labels.
-- **Output Video Generation**: Saves processed videos with annotations to `output.mp4`.
+- **Output Video Generation**: Saves processed videos with annotations to `output.avi`.
 - **Confidence Thresholding**: Only processes detections with confidence > 80% for persons.
 - **Metrics Calculation**: Computes aspect ratio, velocity, angle changes, and other heuristics for fall detection.
 
@@ -74,9 +74,11 @@ To expand the system's capabilities, the following features can be added:
 
 2. **Install Dependencies**:
    - Run the following command to install required packages:
-     ```
+     
+```
      pip install -r requirements.txt
-     ```
+     
+```
    - For enhancements, additional libraries may be needed (e.g., `twilio` for SMS, `flask` for web dashboard). Install them as required.
 
 3. **Download YOLO Model**:
@@ -85,21 +87,23 @@ To expand the system's capabilities, the following features can be added:
 ## Usage
 
 1. **Prepare Input Video**:
-   - Place your input video (e.g., `video.mp4`) in the project directory.
+   - Place your input video (e.g., `video.mp4` or `video_55.avi`) in the project directory.
 
 2. **Run the Detection Script**:
    - Execute the main script:
-     ```
-     python sms.py
-     ```
-   - The script will process the video and save the output to `output.mp4`.
+     
+```
+     python main.py
+     
+```
+   - The script will process the video and save the output to `output.avi`.
 
 3. **View Results**:
-   - Open `output.mp4` to see annotated detections.
+   - Open `output.avi` to see annotated detections.
    - Press 'q' in the display window to exit.
 
 4. **Customization**:
-   - Adjust thresholds (e.g., `velocity_threshold`, `aspect_ratio_threshold`) in `sms.py` for fine-tuning.
+   - Adjust thresholds (e.g., `velocity_threshold`, `aspect_ratio_threshold`) in `main.py` for fine-tuning.
    - For enhancements, modify the script or add new modules as described.
 
 ## Requirements
@@ -108,13 +112,43 @@ To expand the system's capabilities, the following features can be added:
 - Hardware: GPU recommended for faster inference (optional)
 
 ## Project Structure
-- `sms.py`: Main detection script.
+- `main.py`: Main detection script.
 - `classes.txt`: List of COCO class names.
 - `requirements.txt`: Python dependencies.
 - `yolov8s.pt`: Pre-trained YOLOv8 model.
-- `video.mp4`: Sample input video.
-- `output.mp4`: Processed output video.
-- Additional videos: `video_13.mp4`, `video_55.mp4`, `video_63.mp4` for testing.
+- `video.mp4` : Sample input videos.
+- `output.avi`: Processed output video with annotations.
+
+## Demo Videos
+
+### Input Video
+Watch the original input video to see the raw footage before detection:
+📹 **[Input Video](video.avi)**
+
+### Output Video
+Watch the processed output video with fall detection annotations:
+🎬 **[Output Video](output.avi)**
+
+> **Note:** The output video shows real-time fall detection with:
+> - Green bounding boxes around detected persons
+> - "Fall Detected" red alerts when falls are identified
+> - Confidence percentages displayed for each detection
+
+---
+
+*Add your video links above. You can upload videos to:*
+- *YouTube (recommended for LinkedIn)*
+- *Google Drive (with public sharing enabled)*
+- *Directly to LinkedIn as a post*
+
+*Example format after adding links:*
+```
+### Input Video
+📹 [Watch Input Video](https://your-video-link)
+
+### Output Video  
+🎬 [Watch Output Video](https://your-video-link)
+```
 
 ## Contributing
 - Fork the repository and submit pull requests for enhancements.
