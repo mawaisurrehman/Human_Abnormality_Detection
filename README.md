@@ -116,18 +116,22 @@ To expand the system's capabilities, the following features can be added:
 - `classes.txt`: List of COCO class names.
 - `requirements.txt`: Python dependencies.
 - `yolov8s.pt`: Pre-trained YOLOv8 model.
-- `video.mp4` : Sample input videos.
+- `video.avi`: Sample input video.
 - `output.avi`: Processed output video with annotations.
+- `input_video.gif`: Input video in GIF format.
+- `output_video.gif`: Output video in GIF format.
 
 ## Demo Videos
 
 ### Input Video
 Watch the original input video to see the raw footage before detection:
-📹 **[Input Video](video.avi)**
+
+![Input Video](input_video.gif)
 
 ### Output Video
 Watch the processed output video with fall detection annotations:
-🎬 **[Output Video](output.avi)**
+
+![Output Video](output_video.gif)
 
 > **Note:** The output video shows real-time fall detection with:
 > - Green bounding boxes around detected persons
@@ -135,20 +139,6 @@ Watch the processed output video with fall detection annotations:
 > - Confidence percentages displayed for each detection
 
 ---
-
-*Add your video links above. You can upload videos to:*
-- *YouTube (recommended for LinkedIn)*
-- *Google Drive (with public sharing enabled)*
-- *Directly to LinkedIn as a post*
-
-*Example format after adding links:*
-```
-### Input Video
-📹 [Watch Input Video](https://your-video-link)
-
-### Output Video  
-🎬 [Watch Output Video](https://your-video-link)
-```
 
 ## Contributing
 - Fork the repository and submit pull requests for enhancements.
