@@ -18,8 +18,8 @@ frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = cap.get(cv2.CAP_PROP_FPS)
 
 # Initialize VideoWriter to save output
-fourcc = cv2.VideoWriter_fourcc(*'MJPG')  # Use 'MJPG' for AVI encoding (widely supported)
-out = cv2.VideoWriter('Human_Abnormality_Detection/output.avi', fourcc, fps, (640, 640))
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Use 'mp4v' for MP4 encoding
+out = cv2.VideoWriter('Human_Abnormality_Detection/output.mp4', fourcc, fps, (640, 640))
 
 # Load YOLO model
 model = YOLO('Human_Abnormality_Detection/yolov8s.pt')
